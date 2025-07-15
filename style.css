@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+    padding: auto;
+    border: border-box;
+  
+    background-color: rgb(223, 238, 238);
+}
+#conhead{
+    background-color: rgb(125, 141, 141);
+}
+#heading{
+    margin-top: 0;
+    position: relative;
+    color: bisque;
+    font-size: 50px;
+    white-space: nowrap;
+    animation: move 15s linear infinite ;
+
+}
+.containter{
+    height: 90vh;
+    width: 100%;
+}
+#welcomeimage{
+    margin-top: 15px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center ;
+    align-items: center;
+}
+
+.item{
+    border-radius: 20px;
+    margin-right: 5px;
+    padding: 5px;
+    margin-left: 5px;
+    border: 2px solid ;
+    height: 250px;
+    width: 180px;
+    
+}
+
+.item img{
+    margin-left:40px ;
+    height: 100px;
+    width: 100px;
+}
+.item #price {
+    margin-top: 0;
+     margin-left:70px ;
+}
+
+.item #des{
+    margin: 0px;
+    font-size: smaller  ;
+}
+.item button{
+    margin-top: 0px;
+    margin-left: 60px;
+}
+
+
+.products{
+    display: flex;
+    flex-direction: row ;
+    overflow:auto;
+}
+@keyframes move{
+   0% {
+        left: -100%;
+      }
+      100% {
+        left: 100%;
+      }
+}
+
+
+#profile{
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+#profile h1{
+color: #0e5dd4;
+}
+#profile img{
+    height: 200px;
+}
+
+#profile p{
+    margin-left: 25px;
+    text-align: center;
+}
+#acedamicdetails{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#acedamicdetails table tr td{
+    padding: 5px;
+    border: #5b8edb 1px solid;
+}
+#acedamicdetails table tr td:nth-child(2){
+   text-align: center;
+}
+#acedamicdetails table tr th {
+     border: #5b8edb 1px solid;
+    border-collapse: collapse;
+}
+
+#acedamicdetails table tr:hover {background-color: rgb(253, 200, 181);}
+#acedamicdetails table{
+ border: #5b8edb 1px solid;
+}
+
+#contact{
+margin: 10px 0px 10px 0px;
+display: flex;
+
+justify-content: center;
+}
+#contact form{
+border: #5b8edb 1px solid;
+border-radius: 5px;
+}
+#contact input,label{
+    margin: 10px;
+}
+
+#contact input[type=button]{
+    border: #5b8edb 2px solid ;
+    border-radius: 5px;
+    font-size: 13px;
+    background-color: #ffff;
+    color: #2413bd;
+    transition: 1s; 
+}
+
+#contact input[type=button]:hover{
+     border: #23f089 2px solid ;
+    background-color: #23f089;
+    font-size: 15px;
+    transition: 1s;
+}
+#hobbies h3{
+    text-align: center;
+}
+#hobbies ul {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+#hobbies ul li{
+margin: 10px ;
+list-style: square;
+padding: auto;
+}
