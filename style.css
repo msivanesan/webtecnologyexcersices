@@ -135,14 +135,16 @@ border-radius: 5px;
     font-size: 13px;
     background-color: #ffff;
     color: #2413bd;
-    transition: 1s; 
+    transition: 0.2s; 
 }
 
 #contact input[type=button]:hover{
      border: #23f089 2px solid ;
     background-color: #23f089;
     font-size: 15px;
-    transition: 1s;
+
+   
+    transition: 0.2s;
 }
 #hobbies h3{
     text-align: center;
