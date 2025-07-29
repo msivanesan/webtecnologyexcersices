@@ -1,8 +1,12 @@
+*{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings:"wdth" 100;
+}
 body{
     margin: 0;
     padding: auto;
     border: border-box;
-  
     background-color: rgb(223, 238, 238);
 }
 #conhead{
@@ -160,3 +164,57 @@ margin: 10px ;
 list-style: square;
 padding: auto;
 }
+
+
+/* excersise3 */
+
+.container{
+    height: 450px;
+    width: 300px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-left: 35vw;
+    border: #aac3e7 solid 2px;
+    border-radius: 10px;
+    box-shadow: 10px 10px #93b6a5;
+}
+
+.container h1{
+    text-align: center;
+    color: #00d9ff;
+}
+
+.container label{
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    margin: 5px;
+}
+.container input{
+    width: 95%;
+    border: #9da4ad double;
+    border-radius: 5px;
+    margin-bottom: 3px;
+}
+
+.container input:nth-last-child(2){
+    margin-bottom: 10px;
+}
+
+.container input:last-child{
+    width:100px;
+    margin-left: 100px;
+    background-color: #88f7bf;
+    color: #000307;
+    font-weight: bold;
+}
+.container input:last-child:hover{
+    background-color: #23f089;
+}
+.container p{
+    text-align: center;
+    text-decoration: double;
+    font-weight: bold;
+    color: #124121;
+} 
