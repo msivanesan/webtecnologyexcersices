@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Slider</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #111;
+    }
+
+    .slider {
+      width: 600px;
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .slides {
+      display: flex;
+      width: 1800px; /* 600 * 3 */
+      transition: transform 1s ease;
+    }
+
+    .slides img {
+      width: 600px;
+      height: 400px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slider">
+    <div class="slides" id="slideContainer">
+      <img src="https://dummyimage.com/600x400/c910c9/02096e" alt="Slide 1">
+      <img src="https://dummyimage.com/600x400/7fbfff/333" alt="Slide 2">
+      <img src="https://dummyimage.com/600x400/7fff7f/333" alt="Slide 3">
+    </div>
+  </div>
+
+  <script>
+    const slides = document.getElementById('slideContainer');
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % 3; // Only 3 slides
+      slides.style.transform = `translateX(-${index * 600}px)`;
+    }, 4000); // 4 seconds
+  </script>
+
+</body>
+</html>
