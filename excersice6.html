@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="table">
+
+    </div>
+
+<script>
+    var table_container=document.getElementById('table');
+    var table=document.createElement("table");
+    var row1=document.createElement("tr");
+    var row2=document.createElement("tr");
+    row1.innerHTML="<th>col1</th><th>col2</th><th>col3</th>"
+    row2.innerHTML="<td>siva</td><td>25</td><td>mca</td>"
+    table.append(row1);
+    table.append(row2);
+    table_container.append(table);
+</script>
+    
+</body>
+</html>

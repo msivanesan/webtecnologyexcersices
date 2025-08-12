@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Digital Clock</title>
-  <style>
-    body {
-      background: #000;
-      color: #0f0;
-      font-family: monospace;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    #clock {
-      font-size: 60px;
-      letter-spacing: 3px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+
 <body>
-  <div id="clock">00:00:00</div>
-  <script>
-    function updateClock() {
-      const now = new Date();
-      let hours = String(now.getHours()).padStart(2, '0');
-      let minutes = String(now.getMinutes()).padStart(2, '0');
-      let seconds = String(now.getSeconds()).padStart(2, '0');
-      document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+    <h1>geo location tracker</h1>
+    <h3>latitude: <span id="lat"></span></h3>
+    <h3>longitude: <span id="log"></span></h3>
+    <script>
+        function getlocation(){
+        var log = document.getElementById("log");
+        var lat = document.getElementById("lat")
+        var position = navigator.geolocation.getCurrentPosition(success)
+        function success(position) {
+            lat.innerHTML = + position.coords.latitude;
+            log.innerHTML = + position.coords.longitude;
+        }
     }
-    setInterval(updateClock, 1000);
-  </script>
+        getlocation();
+        setInterval(getlocation,2000);
+    </script>
 </body>
+
 </html>
