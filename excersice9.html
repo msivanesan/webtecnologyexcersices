@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toggle Text and Link with jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      let toggled = false; // state tracker
+
+      $("#toggleBtn").click(function () {
+        if (!toggled) {
+          // Change to new text & link
+          $("#myPara").text("This text has been changed!");
+          $("#myLink")
+            .text("Go to OpenAI")
+            .attr("href", "https://openai.com")
+            .attr("target", "_blank");
+          toggled = true;
+        } else {
+          // Revert back to original text & link
+          $("#myPara").text("This is the original paragraph.");
+          $("#myLink")
+            .text("Go to Google")
+            .attr("href", "https://google.com")
+            .attr("target", "_blank");
+          toggled = false;
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <h2>jQuery Toggle Text & Hyperlink Example</h2>
+
+  <p id="myPara">This is the original paragraph.</p>
+  <a id="myLink" href="https://google.com" target="_blank">Go to Google</a>
+  <br><br>
+  <button id="toggleBtn">Toggle Text & Link</button>
+</body>
+</html>

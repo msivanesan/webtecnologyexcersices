@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toggle Background on Double Click</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    p {
+      padding: 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    #container{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px black solid;
+    }
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div id="container"><p id="myPara">Double-click me to toggle my background color!</p></div>
+
+  <script>
+    $(document).ready(function(){
+      $("#container").dblclick(function(){
+        $(this).toggleClass("highlight");
+      });
+    });
+  </script>
+</body>
+</html>
